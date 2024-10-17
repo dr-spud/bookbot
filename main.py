@@ -12,11 +12,10 @@ def main():
     for c in sorted_dict:   
         char_key = c["char"]
         count_key = c["count"]
-        print(f"The letter '{char_key}' has appeared '{count_key}' times")       
+        print(f"The letter '{char_key}' has appeared '{count_key}' times")    
 
-    
+    print("---End of report---")   
 
-    
 
 
 def get_book_text(path):
@@ -29,6 +28,8 @@ def get_word_count(book):
     words = book.split()
     return len(words)
 
+#Counting Characters
+
 def get_char_count(book):
     lowered_text = book.lower()
     char_dict = {}
@@ -38,11 +39,10 @@ def get_char_count(book):
                 char_dict[c] += 1
             else:
                 char_dict[c] = 1
-
-    
+                
     return char_dict
 
-
+#Dictionary Sorting
 
 def sort_on(dict):
     return dict['count']
